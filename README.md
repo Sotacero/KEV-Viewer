@@ -11,13 +11,6 @@
   - Campañas de ransomware conocidas (`Sí` o `No`).
   - Búsqueda precisa por `CVE ID`.
 
-- **Despliegue automático:**  
-  Las tarjetas de marcas se abren automáticamente al buscar un `CVE ID`.
-
-- **Diseño profesional y accesible:**  
-  - Fondo oscuro para minimizar la fatiga visual.  
-  - Resaltado claro de elementos clave con colores suaves.  
-
 - **Datos siempre actualizados:**  
   Descarga automáticamente el JSON más reciente desde el catálogo KEV de CISA.
 
