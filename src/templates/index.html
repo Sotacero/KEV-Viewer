@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEV Viewer</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Listado de Vulnerabilidades Conocidas (KEV)</h1>
+
+        <!-- Barra de búsqueda -->
+        <div class="search-bar">
+            <select id="ransomware-filter">
+                <option value="all">Filtrar por Ransomware</option>
+                <option value="Known">Sí</option>
+                <option value="Unknown">No</option>
+            </select>
+            <input type="text" id="cve-search" placeholder="Buscar por CVE ID...">
+        </div>
+
+        <div id="brand-grid" class="brand-grid">
+            {% for vendor, vul_list in grouped_data.items() %}
+            <div class="brand-card" data-vendor="{{ vendor }}">
+                <div class="brand-header" onclick="toggleDetails(this)">{{ vendor }}</div>
+                <div class="brand-content">
+                    {% for vul in vul_list %}
+                    <div class="cve-item" id="{{ vul.cveID }}" data-cve="{{ vul.cveID | lower }}"
+                        data-ransomware="{{ vul.knownRansomwareCampaignUse }}">
+                        <h3 class="text-danger">CVE ID: {{ vul.cveID }}</h3>
+                        <p><strong class="text-info">Producto(s):</strong> {{ vul.product }}</p>
+                        <p><strong class="text-info">Vulnerabilidad:</strong> {{ vul.vulnerabilityName }}</p>
+                        <p><strong class="text-info">Fecha Añadida:</strong> {{ vul.dateAdded }}</p>
+                        <p><strong class="text-info">Descripción:</strong> {{ vul.shortDescription }}</p>
+                        <p><strong class="text-info">Acción Requerida:</strong> {{ vul.requiredAction }}</p>
+                        <p><strong class="text-info">Fecha Límite:</strong> {{ vul.dueDate }}</p>
+                        <p><strong class="text-danger">Uso Conocido en Ransomware:</strong> {{
+                            vul.knownRansomwareCampaignUse }}</p>
+                        <p><strong class="text-info">Notas:</strong><br>{{ vul.notes | safe }}</p>
+                        <p><strong class="text-info">CWEs:</strong> {{ vul.cwes | join(', ') }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="../static/js/scripts.js"></script>
+</body>
+
+</html>
