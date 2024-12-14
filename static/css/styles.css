@@ -124,7 +124,7 @@ a:hover {
     padding: 5px;
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.75);
-    /* Sombra suave */
+    
     transition: background-color 1s ease, box-shadow 1s ease;
-    /* Transiciones suaves */
+    
 }
