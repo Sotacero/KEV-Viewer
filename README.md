@@ -48,7 +48,7 @@ Python 3.8 o superior instalado.
 Gestor de paquetes pip.
 
 2️⃣ Clonar el Repositorio
-git clone https://github.com/tu-usuario/kev-viewer.git
+git clone https://github.com/Sotacero/kev-viewer.git
 cd kev-viewer
 
 3️⃣ Instalar Dependencias
