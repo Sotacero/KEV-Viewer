@@ -1,10 +1,10 @@
-# 📊 KEV Viewer
+# KEV Viewer
 
 **KEV Viewer** es una herramienta que ayuda a visualizar el catálogo de vulnerabilidades conocidas (KEV) de CISA. Este proyecto organiza, filtra y resalta las vulnerabilidades de forma interactiva.
 
 ---
 
-## 🚀 Características Principales
+##  Características Principales
 
 - **Filtrado dinámico:**  
   Filtra las vulnerabilidades por:
@@ -16,7 +16,7 @@
 
 ---
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```plaintext
 kev-viewer/
@@ -41,7 +41,7 @@ kev-viewer/
 ├── requirements.txt          # Dependencias del proyecto
 └── README.md                 # Documentación del proyecto
 
-🛠️ Instalación y Configuración
+ Instalación y Configuración
 
 1️⃣ Requisitos Previos
 Python 3.8 o superior instalado.
@@ -61,6 +61,3 @@ python src/main.py
 5️⃣ Abrir el Archivo Generado
 Dirígete al directorio dist/ y abre el archivo index.html:
 dist/index.html
-
-🤝 Créditos
-Este proyecto fue desarrollado por Luismi :^)
